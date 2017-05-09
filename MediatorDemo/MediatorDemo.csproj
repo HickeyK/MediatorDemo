@@ -55,7 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Jobs.xaml">
+    <Page Include="UserControls\EmployeesOnJob.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\JobDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Jobs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -67,9 +75,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Job.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="UserControls\EmployeesOnJob.xaml.cs">
+      <DependentUpon>EmployeesOnJob.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Job.cs" />
     <Compile Include="JobChangedEventArgs.cs" />
-    <Compile Include="Jobs.xaml.cs">
+    <Compile Include="UserControls\JobDetails.xaml.cs">
+      <DependentUpon>JobDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Jobs.xaml.cs">
       <DependentUpon>Jobs.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
@@ -105,6 +120,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

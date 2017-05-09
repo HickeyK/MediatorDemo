@@ -13,14 +13,6 @@
             <ColumnDefinition Width="79*" />
         </Grid.ColumnDefinitions>
         
-        <ComboBox Name="JobsComboBox"
-                  HorizontalAlignment="Left"
-                  Margin="10,10,0,0"
-                  Grid.Column="1"
-                  Height="22"
-                  Width="180"
-                  DisplayMemberPath="Title"
-                  SelectionChanged="JobsComboBox_SelectionChanged" />
         <TextBlock HorizontalAlignment="Left"
                    Margin="10,10,0,0"
                    TextWrapping="Wrap"
@@ -28,6 +20,16 @@
                    VerticalAlignment="Top"
                    Height="16"
                    Width="23" />
+
+        <ComboBox Name="JobsComboBox"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Left"
+                  Margin="10,10,0,0"
+                  Grid.Column="1"
+                  Height="22"
+                  Width="180"
+                  DisplayMemberPath="Title"
+                  SelectionChanged="JobsComboBox_SelectionChanged" />
 
     </Grid>
 </UserControl>
